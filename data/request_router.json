@@ -1,5 +1,6 @@
 [
     {
+        "is_catalog" : true,
         "name": "start",
         "en" : "start",
         "ua" : "почати"

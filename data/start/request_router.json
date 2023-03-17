@@ -1,20 +1,24 @@
 [
     {
+        "is_catalog" : true,
         "name": "physics",
         "en" : "physics",
         "ua" : "фізика"
     },
     {
+        "is_catalog" : true,
         "name": "math",
         "en" : "math",
         "ua" : "математика"
     },
     {
+        "is_catalog" : true,
         "name": "geography",
         "en" : "geography",
         "ua" : "географія"
     },
     {
+        "is_catalog" : true,
         "name": "general",
         "en" : "general",
         "ua" : "загальні"
