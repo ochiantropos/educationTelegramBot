@@ -17,6 +17,3 @@ class Category:
     def read_json_catalog(self):
         self.data = read_json(path.join(self.catalog_path , "request_router.json") ,encoding='cp1251', orient="records ")
     
-c = Category("D:\\GitHub\\educationTelegramBot\\data\\general" )
-print(c.data)
-       

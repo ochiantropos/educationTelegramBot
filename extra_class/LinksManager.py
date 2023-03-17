@@ -1,11 +1,14 @@
 import os.path as path
 import os, sys
 
+
 models_directory = (os.path.abspath(os.path.join(os.path.dirname(__file__), '..')) + '/models/')
 sys.path.append(models_directory)
 
+
 from catalog import Category
 from pandas import DataFrame
+
 
 class LinkManager:
     __path : str
@@ -20,9 +23,11 @@ class LinkManager:
         self.DataCategory.catalog_path = path.join(self.DataCategory.catalog_path,next_directive)
         self.DataCategory.read_json_catalog()
         
+    
     def back_to_prev_catalog(self):
         dir_list = self.DataCategory.catalog_path.split("\\")
         self.DataCategory.catalog_path =  "\\".join(  [ dir_list[dir_index_item]  for dir_index_item in range( 0, len( dir_list ) - 1 )  ] )
+    
     
     def get_all_subdirectory(self):
         subdirectives = []
@@ -31,7 +36,8 @@ class LinkManager:
                 if row["is_catalog"] == True:
                     if "name" in self.DataCategory.data.columns: 
                         subdirectives.append(row["name"])
-        print(subdirectives)
+                        
+        return subdirectives
         
     def get_all_commands(self):
         commands = []
@@ -41,10 +47,5 @@ class LinkManager:
                     if "name" in self.DataCategory.data.columns: 
                         commands.append(row["name"])
 
-        print(commands)
+        return commands        
         
-        
-                            
-linkmanager =LinkManager("D:\\GitHub\\educationTelegramBot\\data\\general");
-linkmanager.get_all_subdirectory()
-linkmanager.get_all_commands()

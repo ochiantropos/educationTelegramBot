@@ -3,6 +3,7 @@
         "is_catalog" : false,
         "is_comand": true,
         "is_many_answer": false,
+        "number_of_answer": 1,
 
         "command_name": "time",
 
@@ -16,6 +17,7 @@
         "is_catalog" : false,
         "is_comand": true,
         "is_many_answer": false,
+        "number_of_answer": 1,
 
         "command_name": "dayToNewYear",
 
