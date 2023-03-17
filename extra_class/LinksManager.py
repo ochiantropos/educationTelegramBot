@@ -4,7 +4,3 @@ class LinkManager:
     def __init__(self, _path: str):
         self.__path = _path
         
-        
-    
-        
-    

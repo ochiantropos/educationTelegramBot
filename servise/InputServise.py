@@ -1,4 +1,6 @@
 from abc import ABC, abstractclassmethod, abstractproperty, abstractmethod,abstractclass
+from models.catalog import Category
+
 import os
 import pandas
 import json
@@ -22,6 +24,9 @@ class InputServise(AbstructInputServise):
         super().__init__()
         
         
-    def Massage(self massage):
-        
-        
+    def Massage(self, massage):
+        pass
+    
+    
+    def FindJsonPath(self, path):
+        pass

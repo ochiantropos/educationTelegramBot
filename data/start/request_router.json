@@ -1,0 +1,22 @@
+[
+    {
+        "name": "physics",
+        "en" : "physics",
+        "ua" : "фізика"
+    },
+    {
+        "name": "math",
+        "en" : "math",
+        "ua" : "математика"
+    },
+    {
+        "name": "geography",
+        "en" : "geography",
+        "ua" : "географія"
+    },
+    {
+        "name": "general",
+        "en" : "general",
+        "ua" : "загальні"
+    }        
+]
