@@ -33,9 +33,18 @@ class LinkManager:
                         subdirectives.append(row["name"])
         print(subdirectives)
         
+    def get_all_commands(self):
+        commands = []
+        for index, row in self.DataCategory.data.iterrows():
+            if "is_catalog" in self.DataCategory.data.columns: 
+                if row["is_catalog"] == False:
+                    if "name" in self.DataCategory.data.columns: 
+                        commands.append(row["name"])
+
+        print(commands)
+        
         
                             
-linkmanager =LinkManager("D:\\GitHub\\educationTelegramBot\\data");
+linkmanager =LinkManager("D:\\GitHub\\educationTelegramBot\\data\\general");
 linkmanager.get_all_subdirectory()
-linkmanager.go_to_next_catalog("start")
-linkmanager.get_all_subdirectory()
+linkmanager.get_all_commands()

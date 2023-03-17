@@ -1,8 +1,168 @@
 [
     {
         "is_catalog" : false,
-        "name": "physics",
-        "en" : "physics",
-        "ua" : "фізика"
-    }     
+        "is_comand": true,
+        "is_many_answer": false,
+
+        "command_name": "time",
+
+        "name": "time",
+        "en" : "what time is it?",
+        "ua" : "котра година?",
+        "ua_answer": "Нинішній час: ",
+        "en_answer": "Now time: "
+    },      
+    {
+        "is_catalog" : false,
+        "is_comand": true,
+        "is_many_answer": false,
+
+        "command_name": "dayToNewYear",
+
+        "name": "dayToNewYear",
+        "en" : "what time is it?",
+        "ua" : "скільки днів до Нового Року?",
+        "ua_answer": "До нового року: ",
+        "en_answer": "To new year: "
+    },      
+    {
+        "is_catalog" : false,
+        "is_comand": true,
+        "is_many_answer": false,
+        "number_of_answer": 1,
+
+        "command_name": "botName",
+
+        "name": "botName",
+        "en" : "what is your name?",
+        "ua" : "як тебе звати?",
+        "ua_answer": "Мене звати ",
+        "en_answer": "My name is "
+    },
+    {
+        "is_catalog" : false,
+        "is_comand": false,
+        "is_many_answer": true,
+        "number_of_answer": 5,
+
+        "command_name": "",
+
+        "name": "singACarol",
+        "en" : "sing a carol",
+        "ua" : "заспівати колядку",
+        "ua_answer": "один[1]два[2]три[3]чотири[4]пять[5]",
+        "en_answer": "one[1]two[2]three[3]four[4]five[5]"
+    },
+    {
+        "is_catalog" : false,
+        "is_comand": true,
+        "is_many_answer": false,
+        "number_of_answer": 1,
+
+        "command_name": "writePi",
+
+        "name": "writePi",
+        "en" : "write the number pi",
+        "ua" : "напиши число пі",
+        "ua_answer": "Число Пі =  ",
+        "en_answer": "Whe number pi = "
+    },
+    {
+        "is_catalog" : false,
+        "is_comand": false,
+        "is_many_answer": false,
+        "number_of_answer": 1,
+
+        "command_name": "",
+
+        "name": "whatIsUnderground",
+        "en" : "what is underground?",
+        "ua" : "що таке андеграунд?",
+        "ua_answer": "Андеґра́унд, андегра́унд (англ. underground — від англ. underground - під землею), андеґраундна культура — термін на позначення культури, альтернативної до офіційної і яка не підтримується засобами масової інформації або це творчість осіб, приналежних до субкультури чи контркультури, яка суперечить усталеним філософським, етичним, естетичним кодам соціуму й скеровується на самовираження ",
+        "en_answer": "Underground, underground (from the English underground - under the ground), underground culture is a term for a culture that is alternative to the official one and that is not supported by the mass media, or it is the work of persons belonging to a subculture or counterculture that contradicts established philosophical , ethical and aesthetic codes of society and is directed towards self-expression"
+    },
+    {
+        "is_catalog" : false,
+        "is_comand": false,
+        "is_many_answer": false,
+        "number_of_answer": 1,
+
+        "command_name": "",
+
+        "name": "whereYouCanDownloadBooksForFree",
+        "en" : "where you can download books for free?",
+        "ua" : "де можна скачати книги бесплатно?",
+        "ua_answer": "",
+        "en_answer": ""
+    },
+    {
+        "is_catalog" : false,
+        "is_comand": false,
+        "is_many_answer": false,
+        "number_of_answer": 1,
+
+        "command_name": "",
+        
+        "name": "whoIsEinstein",
+        "en" : "who is einstein?",
+        "ua" : "хто такий ейнштейн?",
+        "ua_answer": "",
+        "en_answer": ""
+    },
+    {
+        "is_catalog" : false,
+        "is_comand": false,
+        "is_many_answer": false,
+        "number_of_answer": 1,
+
+        "command_name": "",
+
+        "name": "whatIsCommunism",
+        "en" : "what is communism?",
+        "ua" : "що таке комуніз?м",
+        "ua_answer": "",
+        "en_answer": ""
+    } ,
+    {
+        "is_catalog" : false,
+        "is_comand": false,
+        "is_many_answer": false,
+        "number_of_answer": 1,
+
+        "command_name": "",
+
+        "name": "whatIsTechnocracy",
+        "en" : "what is technocracy?",
+        "ua" : "що таке технократія?",
+        "ua_answer": "",
+        "en_answer": ""
+    } ,
+    {
+        "is_catalog" : false,
+        "is_comand": false,
+        "is_many_answer": false,
+        "number_of_answer": 1,
+
+        "command_name": "",
+
+        "name": "whenThePyramidsWereBuilt",
+        "en" : "when the pyramids were built?",
+        "ua" : "коли побуовані піраміди?",
+        "ua_answer": "",
+        "en_answer": ""
+    },
+    {
+        "is_catalog" : false,
+        "is_comand": false,
+        "is_many_answer": false,
+        "number_of_answer": 1,
+
+        "command_name": "",
+
+        "name": "whoDiscoveredAmerica",
+        "en" : "who discovered america?",
+        "ua" : "хто відкрив америку?",
+        "ua_answer": "",
+        "en_answer": ""
+    } 
 ]

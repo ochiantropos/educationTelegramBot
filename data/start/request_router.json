@@ -22,5 +22,17 @@
         "name": "general",
         "en" : "general",
         "ua" : "загальні"
-    }        
+    },   
+     {
+        "is_catalog" : true,
+        "name": "philology",
+        "en" : "philology",
+        "ua" : "філологія"
+    },
+    {
+        "is_catalog" : true,
+        "name": "workingWithText",
+        "en" : "working with text",
+        "ua" : "робота з текстом"
+    }
 ]
