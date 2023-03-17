@@ -24,3 +24,4 @@ class InputServise(AbstructInputServise):
         
     def Massage(self massage):
         
+        
