@@ -1,8 +1,15 @@
 [
     {
         "is_catalog" : true,
+        "is_comand": false,
+        "is_many_answer": false,
+
+        "command_name": "",
+
         "name": "start",
         "en" : "start",
-        "ua" : "почати"
+        "ua" : "почати",
+        "ua_answer": "Вас вітає бот ",
+        "en_answer": "Hi im bot "
     }
 ]

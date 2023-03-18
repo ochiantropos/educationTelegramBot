@@ -52,8 +52,8 @@
         "name": "singACarol",
         "en" : "sing a carol",
         "ua" : "заспівати колядку",
-        "ua_answer": "один[1]два[2]три[3]чотири[4]пять[5]",
-        "en_answer": "one[1]two[2]three[3]four[4]five[5]"
+        "ua_answer": "один[]два[]три[]чотири[]пять",
+        "en_answer": "one[]two[]three[]four[]five"
     },
     {
         "is_catalog" : false,

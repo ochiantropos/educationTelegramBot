@@ -1,38 +1,74 @@
 [
     {
         "is_catalog" : true,
+        "is_comand": false,
+        "is_many_answer": false,
+
+        "command_name": "",
         "name": "physics",
         "en" : "physics",
-        "ua" : "фізика"
+        "ua" : "фізика",
+        "ua_answer": "Ви перейшли до теми фізика",
+        "en_answer": "You have moved to the topic physics"
     },
     {
         "is_catalog" : true,
+        "is_comand": false,
+        "is_many_answer": false,
+
+        "command_name": "",
         "name": "math",
         "en" : "math",
-        "ua" : "математика"
+        "ua" : "математика",
+        "ua_answer": "Ви перейшли до теми математика",
+        "en_answer": "You have moved to the topic math"
     },
     {
         "is_catalog" : true,
+        "is_comand": false,
+        "is_many_answer": false,
+
+        "command_name": "",
         "name": "geography",
         "en" : "geography",
-        "ua" : "географія"
+        "ua" : "географія",
+        "ua_answer": "Ви перейшли до теми географія",
+        "en_answer": "You have moved to the topic geography"
     },
     {
         "is_catalog" : true,
+        "is_comand": false,
+        "is_many_answer": false,
+
+        "command_name": "",
         "name": "general",
         "en" : "general",
-        "ua" : "загальні"
+        "ua" : "загальні",
+        "ua_answer": "Ви перейшли до теми загальнa",
+        "en_answer": "You have moved to the topic general"
     },   
      {
         "is_catalog" : true,
+        "is_comand": false,
+        "is_many_answer": false,
+
+        "command_name": "",
         "name": "philology",
         "en" : "philology",
-        "ua" : "філологія"
+        "ua" : "філологія",
+        "ua_answer": "Ви перейшли до теми філологія",
+        "en_answer": "You have moved to the topic philology"
     },
     {
         "is_catalog" : true,
+        "is_comand": false,
+        "is_many_answer": false,
+
+        "command_name": "",
         "name": "workingWithText",
         "en" : "working with text",
-        "ua" : "робота з текстом"
+        "ua" : "робота з текстом",
+        "ua_answer": "Ви перейшли до теми робота з текстом",
+        "en_answer": "You have moved to the topic working with text"
     }
 ]
