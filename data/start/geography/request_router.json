@@ -1,0 +1,59 @@
+[
+    {
+        "is_catalog" : false,
+        "is_comand": false,
+        "is_many_answer": false,
+        "number_of_answer": 1,
+
+        "command_name": "",
+
+        "name": "highestMountains",
+        "en" : "Name the 5 highest mountains in the world and indicate their heights",
+        "ua" : "Назвіть 5 найвищих гір в світі та вкажіть їхні висоти",
+        "ua_answer": "Гора Еверест - 8 848 метрів (29 029 футів) \n Гора К2 - 8 611 метрів (28 251 футів) \n Гора Канченджунга - 8 586 метрів (28 169 футів) \n  Гора Лхотсе - 8 516 метрів (27 940 футів) \n ",
+        "en_answer": "Mount Everest - 8,848 meters (29,029 feet) \n K2 - 8,611 meters (28,251 feet) \n Kangchenjunga - 8,586 meters (28,169 feet) \n Lhotse - 8,516 meters (27,940 feet) \n Makalu - 8,485 meters (27,838 feet)"
+        
+    },
+    {
+        "is_catalog" : false,
+        "is_comand": false,
+        "is_many_answer": false,
+        "number_of_answer": 1,
+
+        "command_name": "",
+
+        "name": "lagersBorders",
+        "en" : "Which two states have the largest number of borders with other states?",
+        "ua" : "Які дві держави мають найбільшу кількість кордонів з іншими державами?",
+        "ua_answer": "Дві країни з найбільшою кількістю кордонів з іншими країнами - Росія та Китай.",
+        "en_answer": "The two countries with the most borders with other countries are Russia and China."
+    },
+    {
+        "is_catalog" : false,
+        "is_comand": false,
+        "is_many_answer": false,
+        "number_of_answer": 1,
+
+        "command_name": "",
+
+        "name": "LagerSity",
+        "en" : "Which city has the largest population in the world?",
+        "ua" : "Яке місто має найбільшу кількість населення в світі?",
+        "ua_answer": "За даними офіційної статистики, місто Токіо в Японії є містом з найбільшою кількістю населення в світі. За даними оцінок на 2021 рік, населення Токіо становить більше 37 мільйонів осіб.",
+        "en_answer": "According to official statistics, the city of Tokyo in Japan is the city with the largest population in the world. According to estimates for 2021, the population of Tokyo is more than 37 million people."
+    },
+    {
+        "is_catalog" : false,
+        "is_comand": true,
+        "is_many_answer": false,
+        "number_of_answer": 1,
+
+        "command_name": "FindTheCoordinatesOfAPoint",
+
+        "name": "",
+        "en" : "Find the coordinates of a point",
+        "ua" : "Знайти координати точки",
+        "ua_answer": "",
+        "en_answer": ""
+    }
+]
