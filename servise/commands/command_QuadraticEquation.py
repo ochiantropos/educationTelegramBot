@@ -12,7 +12,6 @@ class QuadraticEquation(AbstructCommand):
     a_value = 0
     b_value = 0
     c_value = 0
-    res = 0
     
     def solve_quadratic_equation(self, a, b, c, lang):
         # Обчислюємо дискримінант
@@ -48,15 +47,17 @@ class QuadraticEquation(AbstructCommand):
         self.curent_sesion_lenght = 0
         self.a_value = 0
         self.b_value = 0
-        self.s = 0
+        self.c_value = 0
+        
     
     def __init__(self, *args):
         pass
     
     def run(self, args , local="en"):
-        print(f"DebugLog: command >> QuadraticEquation >> run >> args: {args}  self.curent_sesion_lenght = {self.curent_sesion_lenght}")
         
         if self.curent_sesion_lenght == 0:
+            print(f"DebugLog: command >> QuadraticEquation >> run >> args: {args}  self.curent_sesion_lenght = {self.curent_sesion_lenght}")
+            
             if local == "ua":
                 ansver = "введіть значення A квадратного рівняння"
             else:
@@ -73,7 +74,7 @@ class QuadraticEquation(AbstructCommand):
                 try:
                     self.a_value = int(args)
                     if local == "ua":
-                            ansver = "введіть значення B квадратного рівняння"
+                        ansver = "введіть значення B квадратного рівняння"
                     else:
                         ansver = "enter the value of B for the quadratic equation" 
                     
@@ -104,7 +105,7 @@ class QuadraticEquation(AbstructCommand):
                 try:
                     self.b_value = int(args)
                     if local == "ua":
-                            ansver = "введіть значення C квадратного рівняння"
+                        ansver = "введіть значення C квадратного рівняння"
                     else:
                         ansver = "enter the value of C for the quadratic equation" 
                     
@@ -123,7 +124,7 @@ class QuadraticEquation(AbstructCommand):
                 
             else:
                 if local == "ua":
-                   ansver = "The " + args  + " not the integer number"
+                    ansver = "The " + args  + " not the integer number"
                 else:
                     ansver =  args + " не ціле число"
                     
@@ -151,7 +152,7 @@ class QuadraticEquation(AbstructCommand):
                 
             else:
                 if local == "ua":
-                   ansver = "The " + args  + " not the integer number"
+                    ansver = "The " + args  + " not the integer number"
                 else:
                     ansver =  args + " не ціле число"
                     

@@ -57,6 +57,10 @@ class Bot(object):
 
         self.__autorize = self.__bot.message_handler(commands=['start'])(self.Start)
         self.__autorize = self.__bot.message_handler(commands=['почати'])(self.Start)
+        
+        self.Back_1 = self.__bot.message_handler(commands=["back"])(self.Back)
+        self.Back_2 = self.__bot.message_handler(commands=["назад"])(self.Back)
+        
         self.__command = self.__bot.message_handler(content_types=['text'])(self.GetCommand)
         self.__bot.polling(none_stop=True, interval=0)
         
@@ -76,6 +80,11 @@ class Bot(object):
     def Start(self, message):
         ansver = self.input_servie.Massage((message.text).replace("/", ""))
         self.__bot.send_message(message.chat.id, text=ansver)
+
+    def Back(self, message):
+        ansver = self.input_servie.BackTopPrev("en")
+        self.__bot.send_message(message.chat.id, text=ansver)
+
 
     def GetCommand(self, message):
         if self.output_serise.status_is_execute_command != True:
@@ -107,9 +116,6 @@ class Bot(object):
             
         else:
             self.__bot.send_message(message.chat.id, text=ansver)
-
-
-
 
 
 

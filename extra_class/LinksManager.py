@@ -51,8 +51,12 @@ class LinkManager:
     
     def back_to_prev_catalog(self):
         dir_list = self.DataCategory.catalog_path.split("\\")
+        
         self.DataCategory.catalog_path =  "\\".join(  [ dir_list[dir_index_item]  for dir_index_item in range( 0, len( dir_list ) - 1 )  ] )
         self.__path = self.DataCategory.catalog_path
+        
+        self.DataCategory.read_json_catalog()
+        return dir_list[-2], dir_list[-1]
         
     
     
@@ -101,6 +105,7 @@ class LinkManager:
             else:
                 continue
         return False
+    
     
     def get_ansver_is_not_command_by_key(self, key):
         # if in english

@@ -57,7 +57,16 @@ class InputServise(AbstructInputServise):
             
         return False
         
+    def BackTopPrev(self, local = "en"):
+        dir_now, leaved_dir = self.linkManager.back_to_prev_catalog()
+        if local == "en":
+            ansver = f"You come Back to {dir_now} menu"
+        else:
+            ansver = f"Ви повернулись до {dir_now} меню"
             
+        print(f"DebugLog: linkManager come back to {dir_now} and get ansver {ansver}")
+        return ansver
+        
         
     def Massage(self, massage) -> str:
         ansver = ""
