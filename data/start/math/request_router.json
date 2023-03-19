@@ -1,0 +1,38 @@
+[
+    {
+        "is_catalog" : false,
+        "is_comand": false,
+        "is_many_answer": false,
+
+        "command_name": "",
+        "name": "",
+        "en" : "",
+        "ua" : "",
+        "ua_answer": "",
+        "en_answer": ""
+    },
+    {
+        "is_catalog" : false,
+        "is_comand": true,
+        "is_many_answer": false,
+
+        "command_name": "ScalarProductOfVectors",
+        "name": "ScalarProductOfVectors",
+        "en" : "The formula for the scalar product of vectors",
+        "ua" : "Формула скалярного добутку векторів",
+        "ua_answer": "",
+        "en_answer": ""
+    },
+    {
+        "is_catalog" : false,
+        "is_comand": false,
+        "is_many_answer": false,
+
+        "command_name": "",
+        "name": "",
+        "en" : "",
+        "ua" : "",
+        "ua_answer": "",
+        "en_answer": ""
+    }
+]

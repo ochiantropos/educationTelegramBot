@@ -1,0 +1,27 @@
+[
+    {
+        "is_catalog" : false,
+        "is_comand": true,
+        "is_many_answer": false,
+
+        "command_name": "StefanBoltzmannLaw",
+        "name": "StefanBoltzmannLaw",
+        "en" : "Stefan-Boltzmann law",
+        "ua" : "Закон Стефана-Больцмана",
+        "ua_answer": "",
+        "en_answer": ""
+    },
+
+    {
+        "is_catalog" : false,
+        "is_comand": false,
+        "is_many_answer": false,
+
+        "command_name": "",
+        "name": "",
+        "en" : "Derive Planck's constant",
+        "ua" : "Вивести сталу Планка",
+        "ua_answer": "Константа Планка (або стала Планка) - це фізична константа, що позначається як \"h\". Її значення дорівнює близько 6,62607015 × 10⁻³⁴ Дж·с або 4,135667696 × 10⁻¹⁵ еВ·с.",
+        "en_answer": "The Planck constant (or Planck's constant) is a physical constant, denoted as \"h\". Its value is approximately 6.62607015 × 10⁻³⁴ joule-seconds or 4.135667696 × 10⁻¹⁵ electron-volt seconds."
+    }
+]

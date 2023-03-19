@@ -1,0 +1,37 @@
+[
+    {
+        "is_catalog" : false,
+        "is_comand": false,
+        "is_many_answer": false,
+        "command_name": "",
+        "name": "EnglishTenses",
+        "en" : "What are the tenses in English?",
+        "ua" : "Які часи є в англійській мові?",
+        "ua_answer": "У англійській мові є два основні типи часу - дієприкметниковий час (Present Participle) та дієслівний час (Verb Tense). \n Дієприкметниковий час поділяється на Present Participle (Present Continuous) та Past Participle (Past Continuous). Наприклад, Present Participle: \"I am working\" (Я працюю), Past Participle: \"He was singing\" (Він співав). \n Дієслівний час поділяється на простий Present Tense (Present Simple), простий Past Tense (Past Simple), Present Perfect Tense, Past Perfect Tense та багато інших. Наприклад, Present Simple: \"I eat breakfast every morning\" (Я їм сніданок кожного ранку), Past Simple: \"She played tennis yesterday\" (Вона грала у теніс учора), Present Perfect: \"We have seen that movie before\" (Ми вже бачили цей фільм раніше), Past Perfect: \"They had finished their work before dinner\" (Вони вже закінчили свою роботу до вечері).",
+        "en_answer": "There are two main types of tenses in the English language - Present Participle and Verb Tense. \n Participial tense is divided into Present Participle (Present Continuous) and Past Participle (Past Continuous). For example, Present Participle: \"I am working\" (I am working), Past Participle: \"He was singing\" (He sang). \n The verb tense is divided into simple Present Tense (Present Simple), simple Past Tense (Past Simple), Present Perfect Tense, Past Perfect Tense and many others. For example, Present Simple: \"I eat breakfast every morning\", Past Simple: \"She played tennis yesterday\", Present Perfect: \"We have seen that movie before\" (We have already seen this movie before), Past Perfect: \"They had finished their work before dinner\" (They had already finished their work before dinner)."
+    },
+    {
+        "is_catalog" : false,
+        "is_comand": false,
+        "is_many_answer": false,
+
+        "command_name": "",
+        "name": "SomeAndAny",
+        "en" : "What is the difference between Some and Any?",
+        "ua" : "Яка різниця між Some та Any?",
+        "ua_answer": "У англійській мові Some та Any є детермінерами, які використовуються для вираження кількості або наявності чогось. Основна різниця між ними полягає в тому, що Some використовується для позитивних висловлювань, тоді як Any використовується для заперечень та запитань.",
+        "en_answer": "In English, Some and Any are determiners used to express the amount or presence of something. The main difference between the two is that Some is used for positive statements while Any is used for negatives and questions."
+    },
+    {
+        "is_catalog" : false,
+        "is_comand": false,
+        "is_many_answer": false,
+
+        "command_name": "",
+        "name": "casesInUkrainianLG",
+        "en" : "What cases are there in the Ukrainian language?",
+        "ua" : "Які відмінки є в українській мові?",
+        "ua_answer": "Українська мова має сім відмінків: називний, родовий, давальний, знахідний, орудний, місцевий та кличний.",
+        "en_answer": "The Ukrainian language has seven cases: nominative, genitive, dative, accusative, instrumental, local and vocative."
+    }
+]
