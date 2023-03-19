@@ -4,18 +4,36 @@ import sys, os
 commands_dir = (os.path.abspath(os.path.dirname(__file__)) + '/commands/')
 sys.path.append(commands_dir)
 
+from command_AreaOfTheTriangle import AreaOfTheTriangle
+from command_botName import BotName
+from command_CoordinatesOfTheCenterOfTheCircle import CoordinatesOfTheCenterOfTheCircle
+from command_dayToNewYear import DayToNewYear
+from command_DistanceFromAPointToAStraightLineInSpace import DistanceFromAPointToAStraightLineInSpace
+from command_FibonacciNumber import FibonacciNumber
+from command_FindTheCoordinatesOfAPoint import FindTheCoordinatesOfAPoint
+from command_QuadraticEquation import QuadraticEquation
+from command_ScalarProductOfVectors import ScalarProductOfVectors
+from command_StefanBoltzmannLaw import StefanBoltzmannLaw
 from command_time import TimeCommand
 
-
-
 class CommandServise:
-    
+    curent_running_command = ""
     last_ansver = ""
     status_of_command = False
     status_is_execute_command = False
     
     commands = {
-        "time": TimeCommand()
+        "time": TimeCommand(),
+        "AreaOfTheTriangle" : AreaOfTheTriangle(),
+        "botName" : BotName(),
+        "CoordinatesOfTheCenterOfTheCircle" : CoordinatesOfTheCenterOfTheCircle(),
+        "dayToNewYear" : DayToNewYear(),
+        "DistanceFromAPointToAStraightLineInSpace" : DistanceFromAPointToAStraightLineInSpace(),
+        "FibonacciNumber" : FibonacciNumber(),
+        "FindTheCoordinatesOfAPoint" : FindTheCoordinatesOfAPoint(),
+        "QuadraticEquation" : QuadraticEquation(),
+        "ScalarProductOfVectors" : ScalarProductOfVectors(),
+        "StefanBoltzmannLaw" : StefanBoltzmannLaw()
     }
     
     def __init__(self):
@@ -60,15 +78,19 @@ class CommandServise:
             
             
     def run_command_by_name(self, _name, _local):
-        request = self.commands[_name].run(local=_local)
+        try:
+            self.commands[_name].reset()
+        except:
+            print(f"DebugLog: exept ?!!! CommandServise >> run_command_by_name >> for command with name [{_name}] dont exist Reset Method")
+        try:
+            request = self.commands[_name].run("",local=_local)
+            self.last_ansver, self.status_of_command = request[0], request[1]        
+            self.curent_running_command = _name
         
-        self.last_ansver, self.status_of_command = request[0], request[1]
-        if self.status_of_command  == False:
-            self.status_is_execute_command = False 
+        except:
+            print(f"DebugLog: exept ?!!! CommandServise >> run_command_by_name >> for command with name [{_name}] dont exist Run Method")
 
-    def update_execute_to_command(self,_commnad_name,_local, NewExecuteCommand):
-        request = self.commands[_commnad_name].run( [NewExecuteCommand], local=_local )
-        
+
+    def update_execute_to_command(self, NewExecuteCommand,_commnad_name,_local):
+        request = self.commands[_commnad_name].run( NewExecuteCommand, local=_local )
         self.last_ansver, self.status_of_command = request[0], request[1]
-        if self.status_of_command  == False:
-            self.status_is_execute_command = False 

@@ -1,13 +1,13 @@
 [
     {
         "is_catalog" : false,
-        "is_comand": false,
+        "is_comand": true,
         "is_many_answer": false,
 
-        "command_name": "",
-        "name": "",
-        "en" : "",
-        "ua" : "",
+        "command_name": "QuadraticEquation",
+        "name": "QuadraticEquation",
+        "en" : "The formula for solving a quadratic equation",
+        "ua" : "Формула розв'язання квадратного рівняння",
         "ua_answer": "",
         "en_answer": ""
     },
@@ -25,13 +25,49 @@
     },
     {
         "is_catalog" : false,
-        "is_comand": false,
+        "is_comand": true,
         "is_many_answer": false,
 
-        "command_name": "",
-        "name": "",
-        "en" : "",
-        "ua" : "",
+        "command_name": "DistanceFromAPointToAStraightLineInSpace",
+        "name": "DistanceFromAPointToAStraightLineInSpace",
+        "en" : "The formula for calculating the distance from a point to a straight line in space",
+        "ua" : "Формула для обчислення відстані від точки до прямої в просторі",
+        "ua_answer": "",
+        "en_answer": ""
+    },
+    {
+        "is_catalog" : false,
+        "is_comand": true,
+        "is_many_answer": false,
+
+        "command_name": "AreaOfTheTriangle",
+        "name": "AreaOfTheTriangle",
+        "en" : "Area of the triangle",
+        "ua" : "Площа трикутника",
+        "ua_answer": "",
+        "en_answer": ""
+    },
+    {
+        "is_catalog" : false,
+        "is_comand": true,
+        "is_many_answer": false,
+
+        "command_name": "FibonacciNumber",
+        "name": "FibonacciNumber",
+        "en" : "Output the nth Fibonacci number",
+        "ua" : "Вивести н-те число Фібоначчі",
+        "ua_answer": "",
+        "en_answer": ""
+    },
+    {
+        "is_catalog" : false,
+        "is_comand": true,
+        "is_many_answer": false,
+
+        "command_name": "CoordinatesOfTheCenterOfTheCircle",
+        "name": "CoordinatesOfTheCenterOfTheCircle",
+        "en" : "Find the coordinates of the center of the circle if the coordinates of three points lying on the circle are known",
+        "ua" : "Знайти координати центру кола, якщо відомі координати трьох точок, що лежать на колі",
         "ua_answer": "",
         "en_answer": ""
     }

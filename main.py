@@ -14,6 +14,20 @@ sys.stdout.reconfigure(encoding='utf-8')
 # Встановлюємо локаль на uk_UA.UTF-8
 locale.setlocale(locale.LC_ALL, 'uk_UA.UTF-8')
 
+from servise.commands.command_AreaOfTheTriangle import AreaOfTheTriangle
+from servise.commands.command_botName import BotName
+from servise.commands.command_CoordinatesOfTheCenterOfTheCircle import CoordinatesOfTheCenterOfTheCircle
+from servise.commands.command_dayToNewYear import DayToNewYear
+from servise.commands.command_DistanceFromAPointToAStraightLineInSpace import DistanceFromAPointToAStraightLineInSpace
+from servise.commands.command_FibonacciNumber import FibonacciNumber
+from servise.commands.command_FindTheCoordinatesOfAPoint import FindTheCoordinatesOfAPoint
+from servise.commands.command_QuadraticEquation import QuadraticEquation
+from servise.commands.command_ScalarProductOfVectors import ScalarProductOfVectors
+from servise.commands.command_StefanBoltzmannLaw import StefanBoltzmannLaw
+from servise.commands.command_time import TimeCommand
+
+
+
 servise_dir = (os.path.abspath(os.path.dirname(__file__)) + '/servise/')
 servise_commands_dir = (os.path.abspath(os.path.dirname(__file__)) + '/servise/commands/')
 
@@ -24,10 +38,10 @@ sys.path.append(servise_commands_dir)
 
 class Bot(object):
     __token = "5696755755:AAEJhesIzQLNeEm_SQTSV2uWKhfDhZXs2fU"
-    __command_request = []
+    __command_request = [None, None]
     __bot = None
     __instance = None
-    
+    __firt_run_command_init = False
     
     def __init__(self, __Token: str = ''):
         self.input_servie = InputServise("D:\\GitHub\\educationTelegramBot\\data")
@@ -79,13 +93,17 @@ class Bot(object):
         if self.output_serise.status_is_execute_command == True:
             
             if self.output_serise.status_of_command == True:
-                self.output_serise.run_command_by_name(self.__command_request[0], self.__command_request[1])
-                
+                if self.__firt_run_command_init == False:
+                    self.output_serise.run_command_by_name(self.__command_request[0], self.__command_request[1])
+                    self.__firt_run_command_init = True
+                    
                 self.__bot.send_message(message.chat.id, text=self.output_serise.last_ansver)
 
             else:
+                self.output_serise.status_is_execute_command = False
+                self.__firt_run_command_init = False
                 self.__bot.send_message(message.chat.id, text=self.output_serise.last_ansver)
-                
+            
             
         else:
             self.__bot.send_message(message.chat.id, text=ansver)

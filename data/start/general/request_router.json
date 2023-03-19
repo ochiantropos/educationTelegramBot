@@ -57,7 +57,7 @@
     },
     {
         "is_catalog" : false,
-        "is_comand": true,
+        "is_comand": false,
         "is_many_answer": false,
         "number_of_answer": 1,
 
@@ -66,8 +66,8 @@
         "name": "writePi",
         "en" : "write the number pi",
         "ua" : "напиши число пі",
-        "ua_answer": "Число Пі =  ",
-        "en_answer": "Whe number pi = "
+        "ua_answer": "Число Пі = 3,1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679.",
+        "en_answer": "Whe number pi = 3,1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679."
     },
     {
         "is_catalog" : false,
