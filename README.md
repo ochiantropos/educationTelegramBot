@@ -88,7 +88,7 @@
                 </div>
                 <h3 style="text-align: center;">Example</h3>
                 <div style="display: block;margin-left: auto;margin-right: auto;">
-                    <img src="/documentation/example8-modified.jpg" alt="">
+                    <img src="documentation/example8-modified.jpg" alt="">
                 </div>
             </div>
             <h3>reset</h3>
@@ -96,7 +96,7 @@
                 this command updates all the states defined in the command to the base values, including the internal state 
                 <h3 style="text-align: center;">Example</h3>
                 <div style="display: block;margin-left: auto;margin-right: auto;">
-                    <img src="./documentation/example7-modified.jpg" alt="">
+                    <img src="documentation/example7-modified.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -107,7 +107,7 @@
             <p style="padding-left: 10px;padding-right: 10px;">in order for the command written by you to work, you need to register it in the command services</p>
             <h3 style="text-align: center;">Example</h3>
             <div style="display: block;margin-left: auto;margin-right: auto;">
-                <img src="./documentation/example9-modified.jpg" alt="">
+                <img src="documentation/example9-modified.jpg" alt="">
             </div>
         </div>
     </div>
