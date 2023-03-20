@@ -112,6 +112,6 @@
         </div>
     </div>
     <div>
-        <h2>developed by óchiAnthropos</h2>
+        <h2>developed by </h2>
     </div>
 </div>
