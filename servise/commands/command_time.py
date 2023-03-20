@@ -17,11 +17,12 @@ class TimeCommand(AbstructCommand):
         
         if self.curent_sesion_lenght == 0: # last proces
             print(f"DebugLog: command >> TimeCommand >> run >> args: {args}  self.curent_sesion_lenght = {self.curent_sesion_lenght}")
-            today = datetime.date.today()
+            current_datetime = datetime.datetime.now()
+            date_time = current_datetime.strftime("%m/%d/%Y, %H:%M:%S")
             self.curent_sesion_lenght = 0
-            print(f"DebugLog: command >> TimeCommand >> run >> curent_sesion_lenght = 0 (next) (ansver = '{today}' )")
+            print(f"DebugLog: command >> TimeCommand >> run >> curent_sesion_lenght = 0 (next) (ansver = '{date_time}' )")
 
-            return [today,False]
+            return [date_time,False]
         
         else:
             return ['',False]
