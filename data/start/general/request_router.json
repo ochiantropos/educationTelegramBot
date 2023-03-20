@@ -22,8 +22,8 @@
         "command_name": "dayToNewYear",
 
         "name": "dayToNewYear",
-        "en" : "what time is it?",
-        "ua" : "how many days until New Year?",
+        "en" : "how many days until New Year?",
+        "ua" : "скільки днів до Нового Року?",
         "ua_answer": "До нового року: ",
         "en_answer": "To new year: "
     },      
