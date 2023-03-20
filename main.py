@@ -100,9 +100,20 @@ class Bot(object):
         self.__bot.send_message(message.chat.id, text=ansver)
 
     def Back(self, message):
-        ansver = self.input_servie.BackTopPrev("en")
-        self.__save_maneger.SaveToHtml(message.text, ansver, f"{message.chat.id}")
-        self.__bot.send_message(message.chat.id, text=ansver)
+        pprint(self.__base_dir_name)
+        pprint(self.input_servie.linkManager.DataCategory.catalog_path)
+        if self.__base_dir_name != self.input_servie.linkManager.DataCategory.catalog_path:
+            ansver = self.input_servie.BackTopPrev("en")
+            self.__save_maneger.SaveToHtml(message.text, ansver, f"{message.chat.id}")
+            self.__bot.send_message(message.chat.id, text=ansver)
+        else:
+            if message.text == "/back":
+                ansver = "You are already in the last directory"
+            else:
+                ansver = "Ви вже знаходитесь в останні директорії"
+            self.__save_maneger.SaveToHtml(message.text, ansver, f"{message.chat.id}")
+            self.__bot.send_message(message.chat.id, text=ansver)
+            
 
     def CloseUaAnsver(self, message):
         self.__clear_proces()
