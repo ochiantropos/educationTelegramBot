@@ -9,7 +9,7 @@
 
         "name": "highestMountains",
         "en" : "Name the 5 highest mountains in the world and indicate their heights",
-        "ua" : "Назвіть 5 найвищих гір в світі та вкажіть їхні висоти",
+        "ua" : "Назви 5 найвищих гір в світі та вкажіть їхні висоти",
         "ua_answer": "Гора Еверест - 8 848 метрів (29 029 футів) \n Гора К2 - 8 611 метрів (28 251 футів) \n Гора Канченджунга - 8 586 метрів (28 169 футів) \n  Гора Лхотсе - 8 516 метрів (27 940 футів) \n ",
         "en_answer": "Mount Everest - 8,848 meters (29,029 feet) \n K2 - 8,611 meters (28,251 feet) \n Kangchenjunga - 8,586 meters (28,169 feet) \n Lhotse - 8,516 meters (27,940 feet) \n Makalu - 8,485 meters (27,838 feet)"
         
@@ -50,7 +50,7 @@
 
         "command_name": "FindTheCoordinatesOfAPoint",
 
-        "name": "",
+        "name": "FindTheCoordinatesOfAPoint",
         "en" : "Find the coordinates of a point",
         "ua" : "Знайти координати точки",
         "ua_answer": "",

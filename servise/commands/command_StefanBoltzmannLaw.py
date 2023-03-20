@@ -50,7 +50,7 @@ class StefanBoltzmannLaw(AbstructCommand):
             print(f"DebugLog: command >> StefanBoltzmannLaw >> run >> args: {args}  self.curent_sesion_lenght = {self.curent_sesion_lenght}")
             
             try:
-                self.a_value = float(args)
+                self.a_value = int(args)
                 
                 if local == "ua":
                     ansver = "введіть значення T - абсолютна температура тіла"
@@ -76,16 +76,16 @@ class StefanBoltzmannLaw(AbstructCommand):
             print(f"DebugLog: command >> StefanBoltzmannLaw >> run >> args: {args}  self.curent_sesion_lenght = {self.curent_sesion_lenght}")
             
             try:
-                self.b_value = float(args)
+                self.b_value = int(args)
 
                 self.curent_sesion_lenght += 1
                 sigma = 0.00000005670374419
                 res = self.stefan_boltzmann_law(self.a_value, sigma , self.b_value)
                 
                 if local == "ua":
-                    ansver = "Потужність = {res}"
+                    ansver = f"Потужність = {res}"
                 else:
-                    ansver = "Power = {res}"
+                    ansver = f"Power = {res}"
                 
                 print(f"DebugLog: command >> StefanBoltzmannLaw >> run >> curent_sesion_lenght = 2 (next) (ansver = '{ansver}' )")
                 return [ansver, False]

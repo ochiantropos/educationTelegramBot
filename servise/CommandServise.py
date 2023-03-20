@@ -15,6 +15,9 @@ from command_QuadraticEquation import QuadraticEquation
 from command_ScalarProductOfVectors import ScalarProductOfVectors
 from command_StefanBoltzmannLaw import StefanBoltzmannLaw
 from command_time import TimeCommand
+from command_WordsInAlphabeticalOrder import WordsInAlphabeticalOrder
+from command_UpperCase import UpperCase
+from command_MostFrequentlyUsedLetter import MostFrequentlyUsedLetter
 
 class CommandServise:
     curent_running_command = ""
@@ -33,7 +36,10 @@ class CommandServise:
         "FindTheCoordinatesOfAPoint" : FindTheCoordinatesOfAPoint(),
         "QuadraticEquation" : QuadraticEquation(),
         "ScalarProductOfVectors" : ScalarProductOfVectors(),
-        "StefanBoltzmannLaw" : StefanBoltzmannLaw()
+        "StefanBoltzmannLaw" : StefanBoltzmannLaw(),
+        "MostFrequentlyUsedLetter" : MostFrequentlyUsedLetter(),
+        "UpperCase" : UpperCase(),
+        "WordsInAlphabeticalOrder" : WordsInAlphabeticalOrder()
     }
     
     def __init__(self):
@@ -78,19 +84,26 @@ class CommandServise:
             
             
     def run_command_by_name(self, _name, _local):
-        try:
-            self.commands[_name].reset()
-        except:
-            print(f"DebugLog: exept ?!!! CommandServise >> run_command_by_name >> for command with name [{_name}] dont exist Reset Method")
-        try:
-            request = self.commands[_name].run("",local=_local)
-            self.last_ansver, self.status_of_command = request[0], request[1]        
-            self.curent_running_command = _name
+        self.commands[_name].reset()
         
-        except:
-            print(f"DebugLog: exept ?!!! CommandServise >> run_command_by_name >> for command with name [{_name}] dont exist Run Method")
+        # try:
+        # except:
+        #     print(f"DebugLog: exept ?!!! CommandServise >> run_command_by_name >> for command with name [{_name}] dont exist Reset Method")
+        
+        request = self.commands[_name].run("",local=_local)
+        self.last_ansver, self.status_of_command = request[0], request[1] 
+        if self.status_of_command == False:
+            self.status_is_execute_command = False
+                
+        self.curent_running_command = _name
+        
+        # try:
+
+        # except:
+        #     print(f"DebugLog: exept ?!!! CommandServise >> run_command_by_name >> for command with name [{_name}] dont exist Run Method")
 
 
     def update_execute_to_command(self, NewExecuteCommand,_commnad_name,_local):
+        
         request = self.commands[_commnad_name].run( NewExecuteCommand, local=_local )
         self.last_ansver, self.status_of_command = request[0], request[1]

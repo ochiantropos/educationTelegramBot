@@ -1,10 +1,7 @@
 from abc import ABC, abstractclassmethod, abstractproperty, abstractmethod
 from pprint import pprint
-import sys
-import os
-import pandas
-import json
-import locale
+import sys,locale,os,pandas,json
+
 
 # Встановлюємо кодування на utf-8
 sys.stdin.reconfigure(encoding='utf-8')
@@ -23,13 +20,15 @@ sys.path.append(models)
 from LinksManager import LinkManager
 from catalog import Category
 
+
+
 class AbstructInputServise(ABC):
     @abstractclassmethod
     def Massage(self, massage):
         pass
-
+    
     @abstractclassmethod
-    def FindJsonPath(self, path):
+    def BackTopPrev(self, local):
         pass
     
     @abstractclassmethod
@@ -47,8 +46,6 @@ class InputServise(AbstructInputServise):
         self.linkManager = LinkManager(path)
         
     def IsMassageInPath(self, massage):
-        pprint(self.linkManager.get_all_path_way())
-        pprint(massage)
         for way in self.linkManager.get_all_path_way():
             if massage == way:
                 return True
@@ -75,7 +72,15 @@ class InputServise(AbstructInputServise):
             if  self.linkManager.is_the_category_folder(massage):
                 ansver = self.linkManager.get_ansver_is_not_command_by_key(massage)
                 print(f"DebugLog: linkManager find {massage} and get ansver {ansver}")
-                self.linkManager.go_to_next_catalog(massage)
+                lang = self.linkManager.go_to_next_catalog(massage)
+                if lang == "ua":
+                    ad_ansver = self.linkManager.get_all_ukranian_path_way()
+                else:
+                    ad_ansver = self.linkManager.get_all_english_path_way()
+                    
+                ansver += ad_ansver
+                
+                print(f"DebugLog: linkManager ansver += ad_ansver and get (ansver = {ansver})")
                 print(f"DebugLog: linkManager go from ( {prev_path} ) >> to >> ( {self.linkManager.get_curent_path()} ) ")
                 return ansver
                 
@@ -89,10 +94,3 @@ class InputServise(AbstructInputServise):
             print(f"DebugLog: cant find {massage} in linkManager with curent direct in ( { self.linkManager.get_curent_path() } )")
             return "NotFoundCommand"
     
-    
-    def FindJsonPath(self, path):
-        pass
-    
-    
-
-

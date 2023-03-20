@@ -1,0 +1,38 @@
+[
+    {
+        "is_catalog" : false,
+        "is_comand": true,
+        "is_many_answer": false,
+
+        "command_name": "UpperCase",
+        "name": "UpperCase",
+        "en" : "Convert the text to upper case",
+        "ua" : "Перевести текст в верхній регістр",
+        "ua_answer": "",
+        "en_answer": ""
+    },
+    {
+        "is_catalog" : false,
+        "is_comand": true,
+        "is_many_answer": false,
+
+        "command_name": "WordsInAlphabeticalOrder",
+        "name": "WordsInAlphabeticalOrder",
+        "en" : "Display the words in alphabetical order",
+        "ua" : "Вивести слова в алфавітному порядку",
+        "ua_answer": "",
+        "en_answer": ""
+    },    
+    {
+        "is_catalog" : false,
+        "is_comand": true,
+        "is_many_answer": false,
+
+        "command_name": "MostFrequentlyUsedLetter",
+        "name": "MostFrequentlyUsedLetter",
+        "en" : "Find the most frequently used letter in the text.",
+        "ua" : "Знайти найбільш часто вживану літеру в тексті",
+        "ua_answer": "",
+        "en_answer": ""
+    }
+]

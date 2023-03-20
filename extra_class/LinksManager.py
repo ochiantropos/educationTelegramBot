@@ -36,26 +36,30 @@ class LinkManager:
 
     def go_to_next_catalog(self, next_directive):
         next_dir_real_name = ""
+        type_lang = "en"
+        
         for index, row in self.DataCategory.data.iterrows():
             if row["en"] == next_directive:
                 next_dir_real_name = row["name"]
+                type_lang = "en"
+                
             elif row["ua"] == next_directive:
                 next_dir_real_name = row["name"]
+                type_lang = "ua"
+            
             else:
                 pass
             
         self.DataCategory.catalog_path = path.join(self.DataCategory.catalog_path,next_dir_real_name)
         self.__path = self.DataCategory.catalog_path
         self.DataCategory.read_json_catalog()
+        return type_lang
         
     
     def back_to_prev_catalog(self):
         dir_list = self.DataCategory.catalog_path.split("\\")
-        
-        self.DataCategory.catalog_path =  "\\".join(  [ dir_list[dir_index_item]  for dir_index_item in range( 0, len( dir_list ) - 1 )  ] )
-        self.__path = self.DataCategory.catalog_path
-        
-        self.DataCategory.read_json_catalog()
+        self.DataCategory = Category("\\".join(  [ dir_list[dir_index_item]  for dir_index_item in range( 0, len( dir_list ) - 1 )  ] ))
+        self.__path =  self.DataCategory.catalog_path
         return dir_list[-2], dir_list[-1]
         
     
@@ -92,9 +96,35 @@ class LinkManager:
                 way.append(row["en"])
                 way.append(row["ua"])
                 
-                
+        
+        
         #pprint(way)
         return way
+    
+    def get_all_ukranian_path_way(self):
+        way = []
+        for index, row in self.DataCategory.data.iterrows():
+            if "ua" in self.DataCategory.data.columns: 
+                way.append(row["ua"])
+                
+        #pprint(way)
+        ansver = "\nДоступні команди\n"
+        for item in way:
+            ansver += "\n" + item
+        
+        return ansver
+    
+    def get_all_english_path_way(self):
+        way = []
+        for index, row in self.DataCategory.data.iterrows():
+            if "en" in self.DataCategory.data.columns: 
+                way.append(row["en"])
+        ansver = "\nAllowed commands\n"
+        for item in way:
+            ansver += "\n" + item
+        
+        return ansver
+    
     
     def is_the_category_folder(self, key):
         for index, row in self.DataCategory.data.iterrows():
@@ -123,7 +153,6 @@ class LinkManager:
                 
     def if_english_command(self, row):
         d = row["is_comand"]
-        print(d)
         if row["is_comand"] != True:
             if row["is_many_answer"] != True:
                 s = row["en_answer"]
@@ -151,3 +180,19 @@ class LinkManager:
 
     def command_run(self, tag, local="en"):
         return f"__command:{tag} {local}"
+    
+    
+    
+    
+# l = LinkManager("D:\\GitHub\\educationTelegramBot\\data\\")
+# print("----------------------------------------")
+# l.go_to_next_catalog("start")
+# print("----------------------------------------")
+# l.go_to_next_catalog("physics")
+# print("----------------------------------------")
+# l.back_to_prev_catalog()
+# print("----------------------------------------")
+# print(l.get_curent_path())
+# print("----------------------------------------")
+# print(l.DataCategory.data)
+# print("----------------------------------------")

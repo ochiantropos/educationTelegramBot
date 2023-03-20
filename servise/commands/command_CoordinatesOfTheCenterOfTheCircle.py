@@ -20,7 +20,7 @@ class CoordinatesOfTheCenterOfTheCircle(AbstructCommand):
     def __init__(self, *args):
         pass
     
-    def find_circle_center(point1, point2, point3, local):
+    def find_circle_center(self, point1, point2, point3, local):
         x1, y1 = point1
         x2, y2 = point2
         x3, y3 = point3

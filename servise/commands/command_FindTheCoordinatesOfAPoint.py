@@ -12,7 +12,10 @@ class FindTheCoordinatesOfAPoint(AbstructCommand):
     d = 0
     azimuth = 0
     def reset(self):
-        pass
+        self.pointA = [None, None]
+        self.d = 0
+        self.curent_sesion_lenght = 0
+        self.azimuth = 0
     
     def __init__(self, *args):
         pass
