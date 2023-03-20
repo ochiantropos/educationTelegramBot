@@ -139,7 +139,7 @@ class QuadraticEquation(AbstructCommand):
                     ansver = self.solve_quadratic_equation(self.a_value, self.b_value, self.c_value, local)
                     self.curent_sesion_lenght += 1
                     print(f"DebugLog: command >> QuadraticEquation >> run >> curent_sesion_lenght = 3 (next)  (ansver = '{ansver}' )")
-                    return [ansver, True]
+                    return [ansver, False]
                     
                 except:
                     if local == "ua":

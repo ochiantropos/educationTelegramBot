@@ -1,11 +1,10 @@
-import telebot
-
 from pprint import pprint
-
 from servise.InputServise import InputServise
 from servise.CommandServise import CommandServise
-import sys, os
-import locale
+
+from extra_class.SeveManager import SaveManager
+
+import sys, os, locale, json, telebot
 
 # Встановлюємо кодування на utf-8
 sys.stdin.reconfigure(encoding='utf-8')
@@ -29,57 +28,100 @@ class Bot(object):
     __bot = None
     __instance = None
     __firt_run_command_init = False
+    __base_dir_name = os.path.join(os.path.dirname(__file__), "data")
+    __save_maneger : SaveManager
     
-    def __init__(self, __Token: str = ''):
-        self.input_servie = InputServise("D:\\GitHub\\educationTelegramBot\\data")
-        self.output_serise = CommandServise()
-        if __Token == '':
-            self.__bot = telebot.TeleBot(self.__token)
-        else:
-            try:
-                self.__bot = telebot.TeleBot(__Token)
-            except:
+    def __init__(self):
+        # відкриваємо файл config.json і зчитуємо дані з нього
+        with open('config.json') as f:
+            config_data = json.load(f)
+
+        # зчитуємо значення "token" та "directory_to_save" з об'єкту config_data
+        token = config_data['token']
+        directory_to_save = config_data['directory_to_save']
+        
+        _directory_to_save = rf"{os.path.join(os.path.dirname(__file__),directory_to_save)}"
+        
+        if os.path.isdir(_directory_to_save):
+            
+            self.__save_maneger = SaveManager(_directory_to_save)
+            
+            self.input_servie = InputServise(self.__base_dir_name)
+            self.output_serise = CommandServise()
+            
+            
+            if token == '':
                 self.__bot = telebot.TeleBot(self.__token)
-                
+            else:
+                try:
+                    self.__bot = telebot.TeleBot(token)
+                except:
+                    self.__bot = telebot.TeleBot(self.__token)
 
-        self.__autorize = self.__bot.message_handler(commands=['start'])(self.Start)
-        self.__autorize = self.__bot.message_handler(commands=['почати'])(self.Start)
+            self.__autorize = self.__bot.message_handler(commands=['start'])(self.Start)
+            self.__autorize = self.__bot.message_handler(commands=['почати'])(self.Start)
+            
+            self.Back_1 = self.__bot.message_handler(commands=["back"])(self.Back)
+            self.Back_2 = self.__bot.message_handler(commands=["назад"])(self.Back)
         
-        self.Back_1 = self.__bot.message_handler(commands=["back"])(self.Back)
-        self.Back_2 = self.__bot.message_handler(commands=["назад"])(self.Back)
-       
-        self.Close_1 = self.__bot.message_handler(commands=["close"])(self.Close)
-        self.Close_2 = self.__bot.message_handler(commands=["закінчити"])(self.Close)
+            self.Close_1 = self.__bot.message_handler(commands=["close"])(self.CloseEnAnsver)
+            self.Close_2 = self.__bot.message_handler(commands=["закінчити"])(self.CloseUaAnsver)
+            
+            self.__command = self.__bot.message_handler(content_types=['text'])(self.GetCommand)
+            
+            self.__bot.polling(none_stop=True, interval=0)
+            
+        else:
+            print(rf" the _directory_to_save = {_directory_to_save} is not alowed dir to save the dialog ( check your config file )")
         
-        self.__command = self.__bot.message_handler(content_types=['text'])(self.GetCommand)
-        
-        self.__bot.polling(none_stop=True, interval=0)
+
         
                 
-    def __new__(cls):
-        if cls.__instance is None:
-            cls.__instance = super(Bot, cls).__new__(cls)
+    def __new__(cls, *args, **kwargs):
+        if not cls.__instance:
+            cls.__instance = super().__new__(cls, *args, **kwargs)
         return cls.__instance
-
+    
     @staticmethod
     def get_instance():
         if not Bot.__instance:
             Bot()
         return Bot.__instance
 
+    def __clear_proces(self):
+        self.output_serise.status_is_execute_command = False
+        self.output_serise.status_of_command = False
+        self.__firt_run_command_init = False
+
 
     def Start(self, message):
         ansver = self.input_servie.Massage((message.text).replace("/", ""))
+        self.__save_maneger.SaveToHtml(message.text, ansver, f"{message.chat.id}")
         self.__bot.send_message(message.chat.id, text=ansver)
 
     def Back(self, message):
         ansver = self.input_servie.BackTopPrev("en")
+        self.__save_maneger.SaveToHtml(message.text, ansver, f"{message.chat.id}")
         self.__bot.send_message(message.chat.id, text=ansver)
 
+    def CloseUaAnsver(self, message):
+        self.__clear_proces()
+        ansver = "Виконання команди було закрито"
+        self.__save_maneger.SaveToHtml(message.text, ansver, f"{message.chat.id}")
+        self.__bot.send_message(message.chat.id, text=ansver)
+        
+        
+    def CloseEnAnsver(self, message):
+        self.__clear_proces()
+        ansver = "The execution of the command was closed"
+        self.__save_maneger.SaveToHtml(message.text, ansver, f"{message.chat.id}")
+        self.__bot.send_message(message.chat.id, text=ansver)
+        
 
     def GetCommand(self, message):
+        print(f"DebugLog: GetCommand >> \n self.output_serise.status_is_execute_command { self.output_serise.status_is_execute_command} \n self.output_serise.status_of_command {self.output_serise.status_of_command} \n self.__firt_run_command_init {self.__firt_run_command_init}")
         
-        
+        # strategy         
         if self.output_serise.status_of_command != True:
             ansver = self.input_servie.Massage(message.text)
             print(f"DebugLog: GetCommand >> ansver >> {ansver}")
@@ -103,19 +145,22 @@ class Bot(object):
                     else:
                         self.__firt_run_command_init = False
                         
-                    
+                self.__save_maneger.SaveToHtml(message.text, self.output_serise.last_ansver, f"{message.chat.id}")
                 self.__bot.send_message(message.chat.id, text=self.output_serise.last_ansver)
 
             else:
                 self.output_serise.status_is_execute_command = False
                 self.__firt_run_command_init = False
+                self.__save_maneger.SaveToHtml(message.text, self.output_serise.last_ansver, f"{message.chat.id}")
                 self.__bot.send_message(message.chat.id, text=self.output_serise.last_ansver)
             
             
         else:
+            self.__save_maneger.SaveToHtml(message.text, ansver, f"{message.chat.id}")
             self.__bot.send_message(message.chat.id, text=ansver)
 
 
 
 if __name__ == "__main__":
     Bot()
+
