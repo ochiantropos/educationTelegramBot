@@ -103,7 +103,12 @@ class Bot(object):
         pprint(self.__base_dir_name)
         pprint(self.input_servie.linkManager.DataCategory.catalog_path)
         if self.__base_dir_name != self.input_servie.linkManager.DataCategory.catalog_path:
-            ansver = self.input_servie.BackTopPrev("en")
+            if message.text == "/back":
+                ansver = self.input_servie.BackTopPrev("en")
+
+            else:
+                ansver = self.input_servie.BackTopPrev("ua")
+
             self.__save_maneger.SaveToHtml(message.text, ansver, f"{message.chat.id}")
             self.__bot.send_message(message.chat.id, text=ansver)
         else:
