@@ -21,7 +21,7 @@
         "name": "DerivePlanck'sConstant",
         "en" : "Derive Planck's constant",
         "ua" : "Вивести сталу Планка",
-        "ua_answer": "Константа Планка (або стала Планка) - це фізична константа, що позначається як \"h\". Її значення дорівнює близько 6,62607015 × 10⁻³⁴ Дж·с або 4,135667696 × 10⁻¹⁵ еВ·с.",
-        "en_answer": "The Planck constant (or Planck's constant) is a physical constant, denoted as \"h\". Its value is approximately 6.62607015 × 10⁻³⁴ joule-seconds or 4.135667696 × 10⁻¹⁵ electron-volt seconds."
+        "ua_answer": "Константа Планка (або стала Планка) - це фізична константа, що позначається як \"h\". Її значення дорівнює близько 6,62607015 * 10-34 Дж·с або 4,135667696 * 10-15 eBc.",
+        "en_answer": "The Planck constant (or Planck's constant) is a physical constant, denoted as \"h\". Its value is approximately 6.62607015 * 10-34 joule-seconds or 4.135667696 * 10-15 electron-volt seconds."
     }
 ]

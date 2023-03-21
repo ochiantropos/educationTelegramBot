@@ -2,7 +2,6 @@ from typing import List
 from pprint import pprint
 import os.path as path
 from pandas import DataFrame, read_json
-from tabulate import tabulate
 
 class Category:
     json_hash: str
