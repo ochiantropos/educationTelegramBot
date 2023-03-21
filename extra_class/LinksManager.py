@@ -108,7 +108,7 @@ class LinkManager:
                 way.append(row["ua"])
                 
         #pprint(way)
-        ansver = "\nДоступні команди\n"
+        ansver = "\n"
         for item in way:
             ansver += "\n" + item
         
@@ -119,7 +119,7 @@ class LinkManager:
         for index, row in self.DataCategory.data.iterrows():
             if "en" in self.DataCategory.data.columns: 
                 way.append(row["en"])
-        ansver = "\nAllowed commands\n"
+        ansver = "\n"
         for item in way:
             ansver += "\n" + item
         

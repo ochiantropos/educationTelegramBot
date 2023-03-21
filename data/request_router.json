@@ -9,7 +9,7 @@
         "name": "start",
         "en" : "start",
         "ua" : "почати",
-        "ua_answer": "Вас вітає бот ",
-        "en_answer": "Hi im bot "
+        "ua_answer": "Вас вітає бот \nВи можете задати мені питання з наступних тем",
+        "en_answer": "Hi im bot\nYou can ask me questions about the following topics"
     }
 ]

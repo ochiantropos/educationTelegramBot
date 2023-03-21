@@ -1,0 +1,180 @@
+
+	user :
+
+/start
+	bot :
+
+Hi im bot
+You can ask me questions about the following topics
+
+physics
+math
+geography
+general
+philology
+working with text
+	user :
+
+general
+	bot :
+
+You have moved to the topic general
+You can ask me questions on the following topics:
+
+what time is it?
+how many days until New Year?
+what is your name?
+sing a carol
+Say an inspirational quote
+write the number pi
+what is underground?
+where you can download books for free?
+who is einstein?
+what is communism?
+what is technocracy?
+when the pyramids were built?
+who discovered america?
+	user :
+
+what time is it?
+	bot :
+
+03/21/2023, 16:30:57
+	user :
+
+sing a carol
+	bot :
+
+Silent night, holy night,
+All is calm, all is bright
+Round yon virgin mother and child.
+Holy infant, so tender and mild.
+	user :
+
+Say an inspirational quote
+	bot :
+
+"The only way to do great work is to love what you do" - Steve Jobs.
+	user :
+
+/bakc
+	bot :
+
+NotFoundCommand
+	user :
+
+/back
+	bot :
+
+You come Back to start menu
+	user :
+
+geography
+	bot :
+
+You have moved to the topic geography
+You can ask me questions on the following topics:
+
+Name the 5 highest mountains in the world and indicate their heights
+Which two states have the largest number of borders with other states?
+Which city has the largest population in the world?
+Find the coordinates of a point
+	user :
+
+Which two states have the largest number of borders with other states?
+	bot :
+
+The two countries with the most borders with other countries are Russia and China.
+	user :
+
+/back
+	bot :
+
+You come Back to start menu
+	user :
+
+working with text
+	bot :
+
+You have moved to the topic working with text
+You can ask me questions on the following topics:
+
+Convert the text to upper case
+Display the words in alphabetical order
+Find the most frequently used letter in the text.
+	user :
+
+Find the most frequently used letter in the text.
+	bot :
+
+Enter the path to the file you want to change
+	user :
+
+C:\Users\bhj01\OneDrive\Рабочий стол\Новый текстовый документ.txt
+	bot :
+
+Letter = E count = 11 is the most used in this file
+	user :
+
+/exit
+	bot :
+
+I was glad to chat, see you soon.
+	user :
+
+/почати
+	bot :
+
+Вас вітає бот 
+Ви можете задати мені питання з наступних тем
+
+фізика
+математика
+географія
+загальні
+філологія
+робота з текстом
+	user :
+
+математика
+	bot :
+
+Ви перейшли до теми математика
+Ви можете задати мені питання з наступними темами:
+
+Формула розв'язання квадратного рівняння
+Формула скалярного добутку векторів
+Формула для обчислення відстані від точки до прямої в просторі
+Площа трикутника
+Вивести н-те число Фібоначчі
+Знайти координати центру кола, якщо відомі координати трьох точок, що лежать на колі
+	user :
+
+Формула скалярного добутку векторів
+	bot :
+
+Введіть заначення довжини вектора А
+	user :
+
+43
+	bot :
+
+Введіть заначення довжини вектора B
+	user :
+
+23
+	bot :
+
+Введіть заначення кута між ними 
+	user :
+
+80
+	bot :
+
+Скалярним добутком векторів із величинами 43 і 23 та кутом 80 градусів є 171.74.
+	user :
+
+вихід
+	bot :
+
+Радий був поспілкуватись, до зустрічі.

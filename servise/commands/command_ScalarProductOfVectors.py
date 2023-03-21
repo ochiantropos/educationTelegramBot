@@ -21,7 +21,7 @@ class ScalarProductOfVectors(AbstructCommand):
         angle_radians = math.radians(angle_degrees)
         scalar_product = v1 * v2 * math.cos(angle_radians)
         if local == "ua":
-            return f"Скалярним виробником векторів із величинами {v1} і {v2} та кутом {angle_degrees} градусів є {scalar_product:.2f}."
+            return f"Скалярним добутком векторів із величинами {v1} і {v2} та кутом {angle_degrees} градусів є {scalar_product:.2f}."
         else:
             return f"The scalar product of vectors with magnitudes {v1} and {v2}, and angle {angle_degrees} degrees is {scalar_product:.2f}."
 

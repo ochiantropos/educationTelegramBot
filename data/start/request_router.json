@@ -8,8 +8,8 @@
         "name": "physics",
         "en" : "physics",
         "ua" : "фізика",
-        "ua_answer": "Ви перейшли до теми фізика",
-        "en_answer": "You have moved to the topic physics"
+        "ua_answer": "Ви перейшли до теми фізика\nВи можете задати мені питання з наступними темами:",
+        "en_answer": "You have moved to the topic physics\nYou can ask me questions on the following topics:"
     },
     {
         "is_catalog" : true,
@@ -20,8 +20,8 @@
         "name": "math",
         "en" : "math",
         "ua" : "математика",
-        "ua_answer": "Ви перейшли до теми математика",
-        "en_answer": "You have moved to the topic math"
+        "ua_answer": "Ви перейшли до теми математика\nВи можете задати мені питання з наступними темами:",
+        "en_answer": "You have moved to the topic math\nYou can ask me questions on the following topics:"
     },
     {
         "is_catalog" : true,
@@ -32,8 +32,8 @@
         "name": "geography",
         "en" : "geography",
         "ua" : "географія",
-        "ua_answer": "Ви перейшли до теми географія",
-        "en_answer": "You have moved to the topic geography"
+        "ua_answer": "Ви перейшли до теми географія\nВи можете задати мені питання з наступними темами:",
+        "en_answer": "You have moved to the topic geography\nYou can ask me questions on the following topics:"
     },
     {
         "is_catalog" : true,
@@ -44,8 +44,8 @@
         "name": "general",
         "en" : "general",
         "ua" : "загальні",
-        "ua_answer": "Ви перейшли до теми загальнa",
-        "en_answer": "You have moved to the topic general"
+        "ua_answer": "Ви перейшли до теми загальнa\nВи можете задати мені питання з наступними темами:",
+        "en_answer": "You have moved to the topic general\nYou can ask me questions on the following topics:"
     },   
      {
         "is_catalog" : true,
@@ -56,8 +56,8 @@
         "name": "philology",
         "en" : "philology",
         "ua" : "філологія",
-        "ua_answer": "Ви перейшли до теми філологія",
-        "en_answer": "You have moved to the topic philology"
+        "ua_answer": "Ви перейшли до теми філологія\nВи можете задати мені питання з наступними темами:",
+        "en_answer": "You have moved to the topic philology\nYou can ask me questions on the following topics:"
     },
     {
         "is_catalog" : true,
@@ -68,7 +68,7 @@
         "name": "workingWithText",
         "en" : "working with text",
         "ua" : "робота з текстом",
-        "ua_answer": "Ви перейшли до теми робота з текстом",
-        "en_answer": "You have moved to the topic working with text"
+        "ua_answer": "Ви перейшли до теми робота з текстом\nВи можете задати мені питання з наступними темами:",
+        "en_answer": "You have moved to the topic working with text\nYou can ask me questions on the following topics:"
     }
 ]
